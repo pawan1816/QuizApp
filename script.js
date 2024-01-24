@@ -1,13 +1,14 @@
-const questions=[
+const questions = [
 {
     question: "who is the prime minister of india ?",
     answers:[
     { text: "Rahul gandhi", correct:false},
-    { text: "Narander Mode", correct:true},
+    { text: "Narander Modi", correct:true},
     { text: "Arvind kejriwal", correct:false},
     { text: "sonia gandhi", correct:false},
     ]
-},{
+},
+{
     question: "who is knowns as pappu ?",
     answers:[
     { text: "Rahul gandhi", correct:true},
@@ -29,12 +30,15 @@ const questions=[
     question: "who is the most famous minister as of now in the world",
     answers:[
     { text: "Brak obama", correct:false},
-    { text: "Narander Mode", correct:true},
+    { text: "Narander Modi", correct:true},
     { text: "puttin", correct:false},
     { text: "cin zin ping", correct:false},
     ]
 }
 ];
+
+
+
 const questionElement=document.getElementById("question");
 const answerbuttons=document.getElementById("answer-bottons");
 const nextButton=document.getElementById("next-btn");
@@ -53,16 +57,16 @@ function showQuestion(){
     let questionNo=currentQuestionIndex+1;
     questionElement.innerHTML=questionNo+". "+currentQuestion.question;
 
-    currentQuestion.answers.forEach(answer=>{
-        const button= document.createElement("button");
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
         button.innerHTML=answer.text;
         button.classList.add("btn");
         answerbuttons.appendChild(button);
         if(answer.correct){
             button.dataset.correct=answer.correct;
         }
-        button.addEventListener("click",selecrAnswer)
-    })
+        button.addEventListener("click", selectAnswer);
+    });
 }
 function resetState(){
     nextButton.style.display="none";
@@ -71,13 +75,42 @@ function resetState(){
     }
 
 }
-function selecrAnswer(){
-    const selectBtn=e.target;
-    const isCorrect=selectBtn.dataset.correct === "true";
+function selectAnswer(e){
+    const selectedBtn=e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
-        selectBtn.classList.add("correct");
+        selectedBtn.classList.add("correct");
+        Score++;
     }else{
-        selectBtn.classList.add("incorrect");
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerbuttons.children).forEach(button => {
+        if(button.dataset.correct==="true"){
+            button.classList.add("correct");
+        }
+        button.disabled=true;
+    });
+    nextButton.style.display ="block";
+}
+function showScore(){
+    resetState();
+    questionElement.innerHTML=`You Scored ${Score} out of ${questions.length}!`;
+    nextButton.innerHTML="play Again";
+    nextButton.style.display="block";
+}
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex<questions.length){
+        showQuestion();
+    }else{
+        showScore();
     }
 }
+nextButton.addEventListener("click", ()=>{
+   if(currentQuestionIndex < questions.length){
+    handleNextButton();
+   }else{
+    startQuiz();
+   }
+});
 startQuiz();
