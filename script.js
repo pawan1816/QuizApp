@@ -1,40 +1,94 @@
 const questions = [
-{
-    question: "who is the prime minister of india ?",
-    answers:[
-    { text: "Rahul gandhi", correct:false},
-    { text: "Narander Modi", correct:true},
-    { text: "Arvind kejriwal", correct:false},
-    { text: "sonia gandhi", correct:false},
-    ]
-},
-{
-    question: "who is knowns as pappu ?",
-    answers:[
-    { text: "Rahul gandhi", correct:true},
-    { text: "Narander Mode", correct:false},
-    { text: "Arvind kejriwal", correct:false},
-    { text: "sonia gandhi", correct:false},
-    ]
-},
-{
-    question: "who is Graduated from iit ?",
-    answers:[
-    { text: "Rahul gandhi", correct:false},
-    { text: "Narander Mode", correct:false},
-    { text: "Arvind kejriwal", correct:true},
-    { text: "sonia gandhi", correct:false},
-    ]
-},
-{
-    question: "who is the most famous minister as of now in the world",
-    answers:[
-    { text: "Brak obama", correct:false},
-    { text: "Narander Modi", correct:true},
-    { text: "puttin", correct:false},
-    { text: "cin zin ping", correct:false},
-    ]
-}
+    {
+        question: "who is the president of USA ?",
+        answers:[
+        { text: "Joe Biden", correct:true},
+        { text: "Giorgia Meloni", correct:false},
+        { text: "Vladimir Putin", correct:false},
+        { text: "Narander Modi", correct:false},
+        ]
+    },
+    {
+        question: "who is the prime minister of italy ?",
+        answers:[
+        { text: "Vladimir Putin", correct:false},
+        { text: "Narander Modi", correct:false},
+        { text: "Giorgia Meloni", correct:true},
+        { text: "Rishi Sunak", correct:false},
+        ]
+    },
+    {
+        question: "who is the prime minister United Kingdom ?",
+        answers:[
+        { text: "Joe Biden", correct:false},
+        { text: "Giorgia Meloni", correct:false},
+        { text: "Rishi Sunak", correct:true},
+        { text: "Vladimir Putin", correct:false},
+        ]
+    },
+    {
+        question: "who is the president of Russia ?",
+        answers:[
+        { text: "Vladimir Putin", correct:true},
+        { text: "Rishi Sunak", correct:false},
+        { text: "Xi Jinping", correct:false},
+        { text: "Giorgia Meloni", correct:false},
+        ]
+    },
+    {
+        question: "who is the president of Chaina ?",
+        answers:[
+        { text: "Vladimir Putin", correct:false},
+        { text: "Rishi Sunak", correct:false},
+        { text: "Xi Jinping", correct:true},
+        { text: "Giorgia Meloni", correct:false},
+        ]
+    },
+    {
+        question: "who is the president of Canada ?",
+        answers:[
+        { text: "Vladimir Putin", correct:false},
+        { text: "Rishi Sunak", correct:false},
+        { text: "Xi Jinping", correct:false},
+        { text: "Justin Trudeau", correct:true},
+        ]
+    },
+    {
+        question: "who is the prime minister of india ?",
+        answers:[
+        { text: "Rahul gandhi", correct:false},
+        { text: "Narander Modi", correct:true},
+        { text: "Arvind kejriwal", correct:false},
+        { text: "sonia gandhi", correct:false},
+        ]
+    },
+    {
+        question: "who is knowns as pappu ?",
+        answers:[
+        { text: "Rahul gandhi", correct:true},
+        { text: "Narander Mode", correct:false},
+        { text: "Arvind kejriwal", correct:false},
+        { text: "sonia gandhi", correct:false},
+        ]
+    },
+    {
+        question: "which Minister of india is Graduated from iit ?",
+        answers:[
+        { text: "Rahul gandhi", correct:false},
+        { text: "Narander Mode", correct:false},
+        { text: "Arvind kejriwal", correct:true},
+        { text: "sonia gandhi", correct:false},
+        ]
+    },
+    {
+        question: "who is the most famous minister as of now in the world",
+        answers:[
+        { text: "Brak obama", correct:false},
+        { text: "Narander Modi", correct:true},
+        { text: "puttin", correct:false},
+        { text: "cin zin ping", correct:false},
+        ]
+    }
 ];
 
 
