@@ -66,7 +66,7 @@ const questions = [
         question: "who is knowns as pappu ?",
         answers:[
         { text: "Rahul gandhi", correct:true},
-        { text: "Narander Mode", correct:false},
+        { text: "Narander Modi", correct:false},
         { text: "Arvind kejriwal", correct:false},
         { text: "sonia gandhi", correct:false},
         ]
@@ -75,7 +75,7 @@ const questions = [
         question: "which Minister of india is Graduated from iit ?",
         answers:[
         { text: "Rahul gandhi", correct:false},
-        { text: "Narander Mode", correct:false},
+        { text: "Narander Modi", correct:false},
         { text: "Arvind kejriwal", correct:true},
         { text: "sonia gandhi", correct:false},
         ]
@@ -83,10 +83,10 @@ const questions = [
     {
         question: "who is the most famous minister as of now in the world",
         answers:[
-        { text: "Brak obama", correct:false},
+        { text: "Giorgia Meloni", correct:false},
         { text: "Narander Modi", correct:true},
-        { text: "puttin", correct:false},
-        { text: "cin zin ping", correct:false},
+        { text: "Joe Biden", correct:false},
+        { text: "Xi Jinping", correct:false},
         ]
     }
 ];
